@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Ризотто с тыквонини — Italiano Parmisiano</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Ваш основной CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Flowbite -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+
+  <!-- Стили для карточки рецепта -->
+  <style>
+    .recipe-card {
+      background: #ffffff;
+      border-radius: 2rem;
+      padding: 2rem 2.5rem;
+      margin: 2.5rem auto;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+    }
+
+    .recipe-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #1e3a2f;
+      margin-bottom: 0.5rem;
+      border-bottom: 3px solid #CE2B37;
+      padding-bottom: 0.5rem;
+    }
+
+    .recipe-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .recipe-meta span {
+      background: #f4f1ea;
+      padding: 0.4rem 1rem;
+      border-radius: 30px;
+      color: #1e2a2e;
+    }
+
+    .ingredients-box {
+      background: #f4f1ea;
+      border-left: 5px solid #CE2B37;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .ingredients-box h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #1e3a2f;
+      margin-bottom: 1rem;
+    }
+
+    .ingredients-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.4rem 1.5rem;
+    }
+
+    .ingredients-list li::before {
+      content: "• ";
+      color: #CE2B37;
+      font-weight: bold;
+    }
+
+    @media (max-width: 500px) {
+      .ingredients-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .steps-box {
+      margin: 2rem 0 1.5rem;
+    }
+
+    .steps-box h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #1e3a2f;
+      margin-bottom: 1rem;
+    }
+
+    .steps-list {
+      padding-left: 1.5rem;
+      line-height: 1.7;
+    }
+
+    .steps-list li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+      color: #1e2a2e;
+    }
+
+    .recipe-image {
+      width: 100%;
+      max-width: 700px;
+      margin: 1.5rem auto 0;
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .recipe-card {
+        padding: 1.5rem;
+      }
+      .recipe-title {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <div class="header-wrapper">
+    <div class="container-wide header">
+      <div class="logo">ITALIANO PARMISIANO</div>
+      <input type="text" placeholder="🔍 Поиск рецептов и вдохновения..." class="search">
+    </div>
+  </div>
+
+  <!-- КОНТЕНТ РЕЦЕПТА -->
+  <main class="container-wide">
+    <div class="recipe-card">
+
+      <h1 class="recipe-title">🥘 Ризотто с тыквонини</h1>
+
+      <!-- Метаданные -->
+      <div class="recipe-meta">
+        <span>⏱ Время: ~40 мин</span>
+        <span>🍽 Порции: 2–3</span>
+        <span>📊 Сложность: средняя</span>
+      </div>
+
+      <!-- Ингредиенты -->
+      <div class="ingredients-box">
+        <h2>📋 Ингредиенты</h2>
+        <ul class="ingredients-list">
+          <li>Тыква — половина (≈600 г)</li>
+          <li>Чеснок — 4 зубчика</li>
+          <li>Оливковое масло — 50 г (~3 ст. л.)</li>
+          <li>Лук красный — ½ головки</li>
+          <li>Рис Карнароли или Виллоне — 200 г</li>
+          <li>Бульон (овощной или куриный) — ~1 л</li>
+          <li>Сливочное масло — 50 г</li>
+          <li>Пармезан — 100 г (мелко тёртый)</li>
+          <li>Соль, перец — по вкусу</li>
+        </ul>
+      </div>
+
+      <!-- Шаги -->
+      <div class="steps-box">
+        <h2>👩‍🍳 Приготовление</h2>
+        <ol class="steps-list">
+          <li><strong>Подготовьте тыкву.</strong> Разрежьте половину тыквы ложкой выньте семена. Нарежьте дольками толщиной 1,5–2 см, очистите от кожуры и нарежьте кубиками. Вторую половину заверните в плёнку — завтра снова захотите ризотто!</li>
+          <li><strong>Обжарьте тыкву.</strong> Мелко нарубите 2 зубчика чеснока. На сковороде разогрейте половину оливкового масла, выложите кубики тыквы и обжаривайте 7–10 минут до лёгкой корочки. Затем переложите тыкву в миску.</li>
+          <li><strong>Сделайте базу ризотто.</strong> В той же сковороде добавьте оставшееся масло. Мелко нарубите ещё 2 зубчика чеснока и половину красной луковицы. Обжарьте до прозрачности лука (2–3 минуты).</li>
+          <li><strong>Обжарьте рис.</strong> Всыпьте 200 г риса (обязательно Карнароли или Виллоне — другой сорт не даст нужной кремистости!). Постоянно помешивая, обжаривайте рис 1–2 минуты, чтобы он пропитался маслом и ароматами.</li>
+          <li><strong>Добавляйте жидкость.</strong> Залейте рис полностью горячим бульоном (или кипятком, если нет бульона). Убавьте огонь до среднего. Постоянно помешивайте. Как только жидкость впитается/выпарится, подливайте новый половник. Так повторяйте 20–25 минут.</li>
+          <li><strong>Верните тыкву.</strong> Минут через 10 после начала добавления бульона положите к рису обжаренные кубики тыквы. Продолжайте подливать бульон и мешать, стараясь не раздавить тыкву (хотя некоторые кубики разломятся — это даже хорошо).</li>
+          <li><strong>Проверьте готовность.</strong> Когда рис почти готов (мягкий, но с лёгкой сердцевинкой), перестаньте добавлять жидкость. Ризотто должно быть не кашей, а нежной массой, которая слегка колышется.</li>
+          <li><strong>Финиш.</strong> Выключите огонь. Добавьте 50 г сливочного масла и тщательно вмешайте — текстура станет бархатистой. Затем добавьте 100 г мелко тёртого пармезана (не жалейте!). Ещё раз перемешайте до полной гладкости.</li>
+          <li><strong>Подача.</strong> Разложите ризотто по тёплым тарелкам (идеально — тарелки для пасты, они дольше держат тепло). Сверху можно посыпать ещё немного пармезана и украсить зеленью. Подавайте сразу — ризотто не любит ждать.</li>
+        </ol>
+        <p style="margin-top: 1rem; font-weight: 600; color: #1e3a2f;">Buon appetito, дорогие! Пусть Италия будет у вас на тарелке! 🎃🧀</p>
+      </div>
+
+      <!-- Фото -->
+      <img src="NewCanvas4.jpg" alt="Ризотто с тыквой — готовое блюдо" class="recipe-image">
+    </div>
+  </main>
+
+  <!-- ПОДВАЛ -->
+  <footer class="footer-italian">
+    <div class="container-wide footer-content">
+      Italiano Parmisiano — путешествуйте, готовьте и любите Италию вместе со мной!
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>

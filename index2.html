@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Паста Болоньезини — Italiano Parmisiano</title>
+  
+
+  <!-- Tailwind CSS (как на главной) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Ваш основной CSS (стили главной) -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Flowbite (опционально) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+
+  <!-- Стили только для карточки рецепта (можно перенести в styles.css) -->
+  <style>
+    /* Карточка рецепта — белый фон, скругления, тень */
+    .recipe-card {
+      background: #ffffff;
+      border-radius: 2rem;
+      padding: 2rem 2.5rem;
+      margin: 2.5rem auto;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+    }
+
+    .recipe-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #1e3a2f;
+      margin-bottom: 0.5rem;
+      border-bottom: 3px solid #CE2B37;
+      padding-bottom: 0.5rem;
+    }
+
+    .recipe-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .recipe-meta span {
+      background: #f4f1ea;
+      padding: 0.4rem 1rem;
+      border-radius: 30px;
+      color: #1e2a2e;
+    }
+
+    .ingredients-box {
+      background: #f4f1ea;
+      border-left: 5px solid #CE2B37;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .ingredients-box h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #1e3a2f;
+      margin-bottom: 1rem;
+    }
+
+    .ingredients-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.4rem 1.5rem;
+    }
+
+    .ingredients-list li::before {
+      content: "• ";
+      color: #CE2B37;
+      font-weight: bold;
+    }
+
+    @media (max-width: 500px) {
+      .ingredients-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .steps-box {
+      margin: 2rem 0 1.5rem;
+    }
+
+    .steps-box h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #1e3a2f;
+      margin-bottom: 1rem;
+    }
+
+    .steps-list {
+      padding-left: 1.5rem;
+      line-height: 1.7;
+    }
+
+    .steps-list li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+      color: #1e2a2e;
+    }
+
+    .recipe-image {
+      width: 100%;
+      max-width: 700px;
+      margin: 1.5rem auto 0;
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      display: block;
+    }
+
+    /* Адаптация для мобильных внутри карточки */
+    @media (max-width: 600px) {
+      .recipe-card {
+        padding: 1.5rem;
+      }
+      .recipe-title {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ШАПКА (полностью скопирована с главной, использует classes из styles.css) -->
+ <div class="header-wrapper">
+    <div class="container-wide header">
+      <div class="logo">
+    <span>ITALIANO PARMISIANO</span>
+<div class="gif-row" style="display: flex; gap: 4px;">
+      <img src="italian-hand-italian-hands.gif" alt="Флаг Италии" class="header-gif">
+      <img src="italian-hand-italian-hands.gif" alt="Паста" class="header-gif">
+      <img src="italian-hand-italian-hands.gif" alt="Пицца" class="header-gif">
+    </div>
+  </div>
+      <input type="text" placeholder="🔍 Поиск рецептов и вдохновения..." class="search">
+    </div>
+  </div>
+  <!-- КОНТЕНТ РЕЦЕПТА -->
+  <main class="container-wide">
+    <div class="recipe-card">
+
+      <h1 class="recipe-title">🍝 Паста Болоньезини</h1>
+
+      <!-- Метаданные (время, порции, сложность) -->
+      <div class="recipe-meta">
+        <span>⏱ Время: ~30 мин</span>
+        <span>🍽 Порции: 2</span>
+        <span>📊 Сложность: средняя</span>
+      </div>
+
+      <!-- Ингредиенты -->
+      <div class="ingredients-box">
+        <h2>📋 Ингредиенты</h2>
+        <ul class="ingredients-list">
+          <li>Спагетти — 200 г</li>
+          <li>Фарш мясной (говяжий) — 150 г</li>
+          <li>Лук репчатый — 1 шт. (≈150 г)</li>
+          <li>Масло растительное — 2 ст. л.</li>
+          <li>Чеснок — 3–4 зубчика (≈60 г)</li>
+          <li>Вино красное сухое — 50 мл</li>
+          <li>Томат-паста — 1 ст. л. (≈20 г)</li>
+          <li>Вода — 2 ст. л.</li>
+          <li>Масло сливочное — 30 г (для подачи)</li>
+          <li>Соль, перец, лавровый лист</li>
+          <li>Зелень (укроп, зелёный лук) — небольшой пучок</li>
+        </ul>
+      </div>
+
+      <!-- Пошаговый рецепт -->
+      <div class="steps-box">
+        <h2>👩‍🍳 Приготовление</h2>
+        <ol class="steps-list">
+          <li>Лук нарезать мелкими кубиками. Чеснок нарезать слайсами (половину отправить к луку, вторую половину оставить для финала).</li>
+          <li>На разогретую сковороду влить растительное масло, обжарить лук до золотистости (2–3 минуты). Добавить половину чеснока, пассеровать 30 секунд.</li>
+          <li>Добавить мясной фарш, разбивая лопаткой комочки. Обжаривать 4 минуты до изменения цвета.</li>
+          <li>Влить красное сухое вино, дать выпариться алкоголю (1–2 минуты).</li>
+          <li>Добавить томат-пасту, перемешать, убавить огонь. Влить 2 ст. ложки воды, тушить 10 минут под крышкой.</li>
+          <li>Посолить, поперчить, добавить лавровый лист. В самом конце выключить огонь, вмешать оставшийся чеснок и мелко нарезанную зелень.</li>
+          <li>Отварить спагетти согласно инструкции на упаковке до состояния al dente. Откинуть на дуршлаг, сохранив немного воды от варки.</li>
+          <li>На дно тарелки выложить кусочек сливочного масла, на него — спагетти, свёрнутые гнездом (с помощью вилки).</li>
+          <li>Поверх спагетти выложить горячий соус болоньезе. При желании посыпать тёртым пармезаном.</li>
+        </ol>
+        <p style="margin-top: 1rem; font-weight: 600; color: #1e3a2f;">Всем приятного аппетита, родные! 🍷🇮🇹</p>
+      </div>
+
+      <!-- Фото блюда -->
+      <img src="NewCanvas1.jpg" alt="Паста Болоньезини — готовое блюдо" class="recipe-image">
+    </div>
+  </main>
+
+  <!-- ПОДВАЛ (как на главной) -->
+  <footer class="footer-italian">
+    <div class="container-wide footer-content">
+      Italiano Parmisiano — путешествуйте, готовьте и любите Италию вместе со мной!
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>

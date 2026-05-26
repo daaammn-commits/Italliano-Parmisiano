@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Паста без глютена с брюссельской капустини — Italiano Parmisiano</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Ваш основной CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Flowbite -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+
+  <!-- Стили для карточки рецепта -->
+  <style>
+    .recipe-card {
+      background: #ffffff;
+      border-radius: 2rem;
+      padding: 2rem 2.5rem;
+      margin: 2.5rem auto;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+    }
+
+    .recipe-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #1e3a2f;
+      margin-bottom: 0.5rem;
+      border-bottom: 3px solid #CE2B37;
+      padding-bottom: 0.5rem;
+    }
+
+    .recipe-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .recipe-meta span {
+      background: #f4f1ea;
+      padding: 0.4rem 1rem;
+      border-radius: 30px;
+      color: #1e2a2e;
+    }
+
+    .ingredients-box {
+      background: #f4f1ea;
+      border-left: 5px solid #CE2B37;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .ingredients-box h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #1e3a2f;
+      margin-bottom: 1rem;
+    }
+
+    .ingredients-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.4rem 1.5rem;
+    }
+
+    .ingredients-list li::before {
+      content: "• ";
+      color: #CE2B37;
+      font-weight: bold;
+    }
+
+    @media (max-width: 500px) {
+      .ingredients-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .steps-box {
+      margin: 2rem 0 1.5rem;
+    }
+
+    .steps-box h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #1e3a2f;
+      margin-bottom: 1rem;
+    }
+
+    .steps-list {
+      padding-left: 1.5rem;
+      line-height: 1.7;
+    }
+
+    .steps-list li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+      color: #1e2a2e;
+    }
+
+    .recipe-image {
+      width: 100%;
+      max-width: 700px;
+      margin: 1.5rem auto 0;
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .recipe-card {
+        padding: 1.5rem;
+      }
+      .recipe-title {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <div class="header-wrapper">
+    <div class="container-wide header">
+      <div class="logo">ITALIANO PARMISIANO</div>
+      <input type="text" placeholder="🔍 Поиск рецептов и вдохновения..." class="search">
+    </div>
+  </div>
+
+  <!-- КОНТЕНТ РЕЦЕПТА -->
+  <main class="container-wide">
+    <div class="recipe-card">
+
+      <h1 class="recipe-title">🍝 Паста без глютена с брюссельской капустини</h1>
+
+      <!-- Метаданные -->
+      <div class="recipe-meta">
+        <span>⏱ Время: ~20 мин</span>
+        <span>🍽 Порции: 2</span>
+        <span>📊 Сложность: лёгкая</span>
+      </div>
+
+      <!-- Ингредиенты -->
+      <div class="ingredients-box">
+        <h2>📋 Ингредиенты</h2>
+        <ul class="ingredients-list">
+          <li>Паста без глютена — 300 г</li>
+          <li>Чеснок — 2 зубчика</li>
+          <li>Оливковое масло — 30 г (~2 ст. л.)</li>
+          <li>Брюссельская капуста — 100 г (свежая или замороженная)</li>
+          <li>Пармезан тёртый — для подачи</li>
+          <li>Перец чёрный свежемолотый — по вкусу</li>
+          <li>Лёд для шоковой закалки (опционально)</li>
+        </ul>
+      </div>
+
+      <!-- Шаги -->
+      <div class="steps-box">
+        <h2>👩‍🍳 Приготовление</h2>
+        <ol class="steps-list">
+          <li>Сварите пасту до состояния al dente согласно инструкции на упаковке (безглютеновая часто варится чуть меньше). Откиньте на дуршлаг, сохранив немного воды.</li>
+          <li>Пока паста варится, подготовьте капусту: если она замороженная, залейте кипятком на 2 минуты, затем слейте и залейте ледяной водой (можно добавить 10 кубиков льда) – это сохранит яркий зелёный цвет и хрусткость. Свежую просто разрежьте пополам.</li>
+          <li>Разберите половинки капусты на отдельные листья (плотные серединки можно выбросить – они могут горчить).</li>
+          <li>На сковороде разогрейте оливковое масло. Чеснок мелко нарубите и обжарьте до аромата (2–3 минуты).</li>
+          <li>Бросьте капустные листья к чесноку, перемешайте и прогрейте 1–2 минуты. Долго жарить не надо – капуста уже почти готова.</li>
+          <li>Выложите пасту на тарелку, сверху – капусту с чесночным маслом. Щедро посыпьте тёртым пармезаном и свежемолотым чёрным перцем.</li>
+          <li>Готово, дорогие! Приятного аппетита! 🥬🍷</li>
+        </ol>
+      </div>
+
+      <!-- Фото -->
+      <img src="NewCanvas3.jpg" alt="Паста без глютена с брюссельской капустой — готовое блюдо" class="recipe-image">
+    </div>
+  </main>
+
+  <!-- ПОДВАЛ -->
+  <footer class="footer-italian">
+    <div class="container-wide footer-content">
+      Italiano Parmisiano — путешествуйте, готовьте и любите Италию вместе со мной!
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Свекольное перлотто с ванильным морожини — Italiano Parmisiano</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Ваш основной CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Flowbite -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+
+  <!-- Стили для карточки рецепта -->
+  <style>
+    .recipe-card {
+      background: #ffffff;
+      border-radius: 2rem;
+      padding: 2rem 2.5rem;
+      margin: 2.5rem auto;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+    }
+
+    .recipe-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #1e3a2f;
+      margin-bottom: 0.5rem;
+      border-bottom: 3px solid #CE2B37;
+      padding-bottom: 0.5rem;
+    }
+
+    .recipe-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .recipe-meta span {
+      background: #f4f1ea;
+      padding: 0.4rem 1rem;
+      border-radius: 30px;
+      color: #1e2a2e;
+    }
+
+    .ingredients-box {
+      background: #f4f1ea;
+      border-left: 5px solid #CE2B37;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .ingredients-box h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #1e3a2f;
+      margin-bottom: 1rem;
+    }
+
+    .ingredients-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.4rem 1.5rem;
+    }
+
+    .ingredients-list li::before {
+      content: "• ";
+      color: #CE2B37;
+      font-weight: bold;
+    }
+
+    @media (max-width: 500px) {
+      .ingredients-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .steps-box {
+      margin: 2rem 0 1.5rem;
+    }
+
+    .steps-box h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #1e3a2f;
+      margin-bottom: 1rem;
+    }
+
+    .steps-list {
+      padding-left: 1.5rem;
+      line-height: 1.7;
+    }
+
+    .steps-list li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+      color: #1e2a2e;
+    }
+
+    .recipe-image {
+      width: 100%;
+      max-width: 700px;
+      margin: 1.5rem auto 0;
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .recipe-card {
+        padding: 1.5rem;
+      }
+      .recipe-title {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <div class="header-wrapper">
+    <div class="container-wide header">
+      <div class="logo">ITALIANO PARMISIANO</div>
+      <input type="text" placeholder="🔍 Поиск рецептов и вдохновения..." class="search">
+    </div>
+  </div>
+
+  <!-- КОНТЕНТ РЕЦЕПТА -->
+  <main class="container-wide">
+    <div class="recipe-card">
+
+      <h1 class="recipe-title">🥘 Свекольное перлотто с ванильным морожини</h1>
+
+      <!-- Метаданные -->
+      <div class="recipe-meta">
+        <span>⏱ Время: ~50 мин</span>
+        <span>🍽 Порции: 2–3</span>
+        <span>📊 Сложность: средняя</span>
+      </div>
+
+      <!-- Ингредиенты -->
+      <div class="ingredients-box">
+        <h2>📋 Ингредиенты</h2>
+        <ul class="ingredients-list">
+          <li>Перловка — 100 г</li>
+          <li>Свекла — 1 крупная (≈250 г)</li>
+          <li>Лимон — 1 шт. (цедра)</li>
+          <li>Сельдерей — 1 стебель</li>
+          <li>Лук репчатый — 1 шт.</li>
+          <li>Овощной бульон — 1 л (горячий)</li>
+          <li>Оливковое масло — 30 мл (≈2 ст. л.)</li>
+          <li>Пармезан тёртый — 50 г</li>
+          <li>Ванильное мороженое — 2 шарика (по желанию)</li>
+          <li>Соль, перец — по вкусу</li>
+        </ul>
+      </div>
+
+      <!-- Шаги -->
+      <div class="steps-box">
+        <h2>👩‍🍳 Приготовление</h2>
+        <ol class="steps-list">
+          <li><strong>Сварите свеклу.</strong> Разрежьте свеклу пополам (так быстрее). Варите в подсоленной воде до мягкости — нож должен входить легко. Слейте воду, но <em>не выливайте её</em> (она пригодится для пюре). Остудите, очистите.</li>
+          <li><strong>Подготовьте остальное.</strong> Мелко натрите цедру лимона. Нарежьте сельдерей тонкими кубиками, лук — мелко. Натрите пармезан.</li>
+          <li><strong>Свекольное пюре.</strong> Нарежьте варёную свеклу кусочками, поместите в блендер. Добавьте немного воды от варки и пробейте до гладкого пюре. Отложите.</li>
+          <li><strong>Обжарьте базу.</strong> В сотейнике разогрейте оливковое масло. Обжарьте лук и сельдерей до прозрачности (3–4 минуты), не зажаривайте.</li>
+          <li><strong>Добавьте перловку.</strong> Всыпьте перловку, перемешайте и прогревайте 2 минуты, чтобы крупа впитала масло и ароматы.</li>
+          <li><strong>Подливайте бульон.</strong> Как с ризотто: вливайте по половнику горячего бульона, постоянно помешивая. Ждите, пока жидкость почти полностью впитается, затем добавляйте следующий половник. Процесс займёт около 30–35 минут (перловка варится дольше риса).</li>
+          <li><strong>Добавьте цедру и пюре.</strong> Когда перловка станет почти мягкой (минуты за 3 до готовности), вмешайте лимонную цедру и свекольное пюре. Продолжайте помешивать.</li>
+          <li><strong>Финиш с пармезаном.</strong> За 1–2 минуты до конца добавьте тёртый пармезан и хорошо перемешайте. Масса станет кремистой. Жидкости должно остаться совсем немного.</li>
+          <li><strong>Подача.</strong> Выложите перлотто на тёплую тарелку. Если решитесь — сверху положите шарик ванильного мороженого. Оно контрастирует с тёплым, слегка сладким перлотто — необычно, но вкусно! Если сомневаетесь — просто подайте без мороженого, посыпав ещё пармезаном.</li>
+        </ol>
+        <p style="margin-top: 1rem; font-weight: 600; color: #1e3a2f;">Перловка — на любителя, но в этом рецепте она звучит по‑новому. Смелых — угощайтесь с мороженым! 🇮🇹🍧</p>
+      </div>
+
+      <!-- Фото -->
+      <img src="NewCanvas6.jpg" alt="Свекольное перлотто с ванильным мороженым — готовое блюдо" class="recipe-image">
+    </div>
+  </main>
+
+  <!-- ПОДВАЛ -->
+  <footer class="footer-italian">
+    <div class="container-wide footer-content">
+      Italiano Parmisiano — путешествуйте, готовьте и любите Италию вместе со мной!
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>

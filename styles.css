@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn+SC:wght@400;600;700;900&display=swap');
+
+/* ---------- RESET & ГЛОБАЛЬНЫЕ ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("DSC05565.JPG");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  font-family: 'Vollkorn SC', 'Georgia', 'Times New Roman', serif;
+  color: #1e2a2e;
+}
+
+/* затемнение для читаемости текста поверх фото */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* общий контейнер для всех секций, чтобы ширина была одинаковой */
+.container-wide {
+  max-width: 1200px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- HEADER (шапка) ---------- */
+.header-wrapper {
+  background: rgba(75, 55, 45, 0.92);
+  backdrop-filter: blur(4px);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  color: white;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+/* поиск: белый фон + чёрный текст (исправлено) */
+.search {
+  padding: 10px 20px;
+  border-radius: 40px;
+  border: none;
+  background-color: #ffffff;
+  color: #1f2937;
+  font-size: 1rem;
+  width: 260px;
+  outline: none;
+  transition: 0.2s;
+  font-family: inherit;
+}
+
+.search:focus {
+  box-shadow: 0 0 0 3px rgba(255,215,0,0.5);
+}
+
+.search::placeholder {
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* ---------- MAIN BOX (секция о себе / итальянский триколор) ---------- */
+.about-section {
+  margin: 3rem auto;
+}
+
+/* флаг Италии: три вертикальные колонки (зелёный, белый, красный) */
+.italian-tricolor {
+  display: flex;
+  width: 100%;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0 20px 30px -12px rgba(0,0,0,0.3);
+  min-height: 400px;
+}
+
+/* общие стили колонок */
+.col-green {
+  background-color: #009246;  /* зелёный итальянского флага */
+  flex: 1;
+  padding: 2rem 1.5rem;
+  color: white;
+}
+.col-white {
+  background-color: #FEFEF7;
+  flex: 1;
+  padding: 2rem 1.5rem;
+  color: #2d3e3a;
+}
+.col-red {
+  background-color: #CE2B37;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+/* текст внутри зелёного и белого */
+.col-green h2, .col-white h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+  border-left: 5px solid currentColor;
+  padding-left: 0.75rem;
+}
+.col-green p, .col-white p {
+  line-height: 1.6;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.col-green p {
+  color: #f9f7f3;
+}
+.col-white p {
+  color: #2c423e;
+}
+
+/* фото в красной колонке */
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.profile-img {
+  width: 180px;
+  max-width: 80%;
+  border-radius: 30px;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.25);
+  border: 4px solid #ffdfb8;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+.profile-img:hover {
+  transform: scale(1.02);
+}
+.col-red .caption {
+  margin-top: 1.2rem;
+  font-style: italic;
+  font-weight: 500;
+  color: #fff3e0;
+  text-align: center;
+  background: rgba(0,0,0,0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 60px;
+  backdrop-filter: blur(2px);
+}
+
+/* ---------- РЕЦЕПТЫ (секция) ---------- */
+.recipes {
+  margin: 4rem auto;
+}
+
+.recipes-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.recipes-title {
+  background: #6b4f3b;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.7rem 1.8rem;
+  border-radius: 40px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.italian-flag-emoji {
+  font-size: 1.8rem;
+  filter: drop-shadow(0 2px 2px rgba(0,0,0,0.2));
+}
+
+.cards {
+  display: flex;
+  gap: 1.8rem;
+  flex-wrap: wrap;
+}
+.card {
+  flex: 1;
+  min-width: 220px;
+  padding: 1.8rem;
+  border-radius: 2rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+}
+.card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  border-bottom: 2px dashed rgba(0,0,0,0.2);
+  display: inline-block;
+}
+.card p {
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+.green { background: #7fae9f; color: #1e2f2a; }
+.white { background: #fef7e0; color: #3b2c1f; }
+.pink { background: #d6a0a0; color: #2d1f1f; }
+
+/* ---------- FOOTER ---------- */
+.footer-italian {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 1rem;
+}
+.footer-content {
+  background: rgba(0,0,0,0.4);
+  border-radius: 60px;
+  padding: 0.7rem;
+  color: #fff3e0;
+  font-size: 0.85rem;
+  backdrop-filter: blur(3px);
+}
+
+/* ---------- АДАПТИВНОСТЬ (мобильная версия) ---------- */
+@media (max-width: 880px) {
+  .container-wide {
+    width: 92%;
+  }
+  .logo {
+    font-size: 1.4rem;
+  }
+  .search {
+    width: 220px;
+    padding: 8px 16px;
+  }
+}
+
+/* на планшетах и мобильных: вертикальные колонки превращаем в блоки */
+@media (max-width: 780px) {
+  .italian-tricolor {
+    flex-direction: column;
+    border-radius: 2rem;
+  }
+  /* сохраняем цвета, но порядок: зелёный (текст), белый (текст), красный (фото) */
+  .col-green, .col-white, .col-red {
+    width: 100%;
+    text-align: center;
+  }
+  .col-green h2, .col-white h2 {
+    border-left: none;
+    border-bottom: 3px solid currentColor;
+    display: inline-block;
+    padding-left: 0;
+    padding-bottom: 0.3rem;
+  }
+  .col-green p, .col-white p {
+    font-size: 1rem;
+  }
+  .col-red {
+    padding: 2rem 1rem;
+  }
+  .profile-img {
+    width: 160px;
+  }
+  .cards {
+    flex-direction: column;
+  }
+  .card {
+    width: 100%;
+  }
+  .recipes-title {
+    font-size: 1.3rem;
+  }
+}
+
+/* очень маленькие экраны */
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .search {
+    width: 90%;
+    max-width: 260px;
+  }
+  .col-green, .col-white {
+    padding: 1.5rem;
+  }
+  .col-red {
+    padding: 1.8rem;
+  }
+  .recipes-title {
+    font-size: 1.2rem;
+    padding: 0.4rem 1.2rem;
+  }
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gif-row {
+  display: flex;
+  gap: 4px;
+}
+
+.header-gif {
+  display: inline-block;
+  height: 30px;
+  margin-left: 4px; /* небольшой отступ между gif */
+  vertical-align: middle;
+}

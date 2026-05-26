@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Пицца Маргаритини — Italiano Parmisiano</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Ваш основной CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Flowbite -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+
+  <!-- Стили для карточки рецепта -->
+  <style>
+    .recipe-card {
+      background: #ffffff;
+      border-radius: 2rem;
+      padding: 2rem 2.5rem;
+      margin: 2.5rem auto;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+    }
+
+    .recipe-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #1e3a2f;
+      margin-bottom: 0.5rem;
+      border-bottom: 3px solid #CE2B37;
+      padding-bottom: 0.5rem;
+    }
+
+    .recipe-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .recipe-meta span {
+      background: #f4f1ea;
+      padding: 0.4rem 1rem;
+      border-radius: 30px;
+      color: #1e2a2e;
+    }
+
+    .ingredients-box {
+      background: #f4f1ea;
+      border-left: 5px solid #CE2B37;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      margin: 1.5rem 0;
+    }
+
+    .ingredients-box h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #1e3a2f;
+      margin-bottom: 1rem;
+    }
+
+    .ingredients-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.4rem 1.5rem;
+    }
+
+    .ingredients-list li::before {
+      content: "• ";
+      color: #CE2B37;
+      font-weight: bold;
+    }
+
+    @media (max-width: 500px) {
+      .ingredients-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .steps-box {
+      margin: 2rem 0 1.5rem;
+    }
+
+    .steps-box h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #1e3a2f;
+      margin-bottom: 1rem;
+    }
+
+    .steps-list {
+      padding-left: 1.5rem;
+      line-height: 1.7;
+    }
+
+    .steps-list li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+      color: #1e2a2e;
+    }
+
+    .recipe-image {
+      width: 100%;
+      max-width: 700px;
+      margin: 1.5rem auto 0;
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .recipe-card {
+        padding: 1.5rem;
+      }
+      .recipe-title {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<!-- ШАПКА (полностью скопирована с главной, использует classes из styles.css) -->
+  <div class="header-wrapper">
+    <div class="container-wide header">
+     <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+    <span>ITALIANO PARMISIANO</span>
+ <div class="gif-row" style="display: flex; gap: 4px;">
+      <img src="italian-hand-italian-hands.gif" alt="Флаг Италии" class="header-gif">
+      <img src="italian-hand-italian-hands.gif" alt="Паста" class="header-gif">
+      <img src="italian-hand-italian-hands.gif" alt="Пицца" class="header-gif">
+    </div>
+  </div>
+      <input type="text" placeholder="🔍 Найди свою mi vida loca!..." class="search">
+    </div>
+  </div>
+  <!-- КОНТЕНТ РЕЦЕПТА -->
+  <main class="container-wide">
+    <div class="recipe-card">
+
+      <h1 class="recipe-title">🍕 Пицца Маргаритини</h1>
+
+      <!-- Метаданные -->
+      <div class="recipe-meta">
+        <span>⏱ Время: ~15 мин</span>
+        <span>🍽 Порции: 2</span>
+        <span>📊 Сложность: средняя</span>
+      </div>
+
+      <!-- Ингредиенты -->
+      <div class="ingredients-box">
+        <h2>📋 Ингредиенты</h2>
+        <ul class="ingredients-list">
+          <li>Тесто для пиццы (дрожжевое) — 250 г</li>
+          <li>Моцарелла — 100 г</li>
+          <li>Базилик свежий — 6–8 листиков</li>
+          <li>Томатный соус (с травами) — 3–4 ст. л.</li>
+          <li>Помидор — 1 крупный</li>
+          <li>Оливковое масло — для смазывания</li>
+          <li>Соль, перец — по вкусу</li>
+        </ul>
+      </div>
+
+      <!-- Шаги -->
+      <div class="steps-box">
+        <h2>👩‍🍳 Приготовление</h2>
+        <ol class="steps-list">
+          <li><strong>Подготовьте начинку.</strong> Помидоры нарежьте тонкими кольцами (чтобы успели пропечься за 3–4 минуты). Моцареллу нарежьте толстыми брусками толщиной около 1 см — такой сыр плавится медленно и не успеет превратиться в лужицу.</li>
+          <li><strong>Раскатайте тесто.</strong> Подпылите стол мукой. Раскатывайте шар в разные стороны, переворачивая, чтобы форма получилась круглой. Толщина — не более 3 мм. Можно вырезать круг с помощью тарелки. Переложите тесто на пергамент.</li>
+          <li><strong>Смажьте основу.</strong> Ложкой выложите томатный соус в центр и размажьте, отступая от краёв (если хотите бортик — заверните края). Соус можно взять с травами, чесноком, перцем.</li>
+          <li><strong>Выложите сыр и начинку.</strong> Разбросайте половину кусочков моцареллы по соусу — это скрепит начинку с коржом. Сверху — половину листиков базилика, кольца помидоров. Затем оставшийся сыр. Приправьте перцем и солью.</li>
+          <li><strong>Разогрейте духовку</strong> до максимума (250–280 °C). Противень разогрейте в духовке 10 минут.</li>
+          <li><strong>Выпекайте.</strong> Переложите пиццу вместе с пергаментом на горячий противень. Выпекайте на нижней полке 3–6 минут. Признак готовности: корж подрумянился, сыр начал плавиться, но ещё не растёкся полностью.</li>
+          <li><strong>Подача.</strong> Дайте пицце постоять 1 минуту. Разрежьте специальным ножом для пиццы (он режет аккуратнее круглых ножей). Посыпьте оставшимся свежим базиликом. Приятного аппетита, котики! 🍷</li>
+        </ol>
+        <p style="margin-top: 1rem; font-weight: 600; color: #1e3a2f;">Минимализм, свежесть и итальянская душа — вот рецепт идеальной Маргариты в нашем исполнении! 🇮🇹</p>
+      </div>
+
+      <!-- Фото -->
+      <img src="NewCanvas9.jpg" alt="Пицца Маргаритини с моцареллой, томатами и базиликом — готовое блюдо" class="recipe-image">
+    </div>
+  </main>
+
+  <!-- ПОДВАЛ -->
+  <footer class="footer-italian">
+    <div class="container-wide footer-content">
+      Italiano Parmisiano — путешествуйте, готовьте и любите Италию вместе со мной!
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>
